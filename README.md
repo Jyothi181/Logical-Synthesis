@@ -32,7 +32,6 @@ Logical synthesis refers to the process of converting a high-level abstract desc
 - **Shell ->** csh or tcsh
 - **Path ->** /home/tools/synopsys/cshrc_synopsys
 - The file cshrc_synopsys is used to invoke the Synopsys tool. It contains licence and tool executable paths.
-- The maximum delay in sdc is set to 1.5
 
 # Steps in Logical Synthesis
 
@@ -43,7 +42,9 @@ Load the input files into tool
      `set target_library ./inputs/saed32hvt_ss0p95v125c.db`
    
      `set link_library ./inputs/saed32hvt_ss0p95v125c.db`
-   
+
+    ![image](https://github.com/Jyothi181/Logical-Synthesis/blob/main/pictures/Picture1.png)
+
 3. Loading RTL file includes two steps - analyze and elaborate
    
    - Analyze RTL file by using analyze command and automatically read the RTL to tool by using autoread.
@@ -51,7 +52,8 @@ Load the input files into tool
     `analyze -format verilog ./inputs/alu.v -autoread -top ALU`
 
    - Then elaborate the design to resolve the hierarchies. `elaborate ALU`
-
+  
+ 
 5. Read the SDC file by using source command.
 
   `source ./inputs/alu.sdc`
@@ -59,23 +61,35 @@ Load the input files into tool
 5. Perform synthesis to map the cells to the given library by using compile_ultra command
 
    `compile_ultra -no_autoungroup`
+
+    ![image](https://github.com/Jyothi181/Logical-Synthesis/blob/main/pictures/Picture2.png)
+    ![image](https://github.com/Jyothi181/Logical-Synthesis/blob/main/pictures/Picture3.png)
+
    
 7. To check the synthesized netlist for issues - `check_design`
 
 8. The synthesized netlist can be written into a text file -> `write_file -format verilog -hierarchy -output ./outputs/alu.vg`
 
+  ![image](https://github.com/Jyothi181/Logical-Synthesis/blob/main/pictures/Picture4.png)
+  
+  ![image](https://github.com/Jyothi181/Logical-Synthesis/blob/main/pictures/Picture5.png)
+
+
 # Reports
 
 The area, timing and power information of cells can be obtained.
 
-report_area
+The area report shows the individual cell areas and total area -> `report_area`
 
+ ![image](https://github.com/Jyothi181/Logical-Synthesis/blob/main/pictures/Picture6.png)
 
+The maximum delay in sdc (synopsys design constraints) is set to 1.5 and arrival time is 1.5. so, the total slack is 0(met) -> `report_timing`
 
-report_timing
+ ![image](https://github.com/Jyothi181/Logical-Synthesis/blob/main/pictures/Picture7.png)
 
-report_power
+The internal power, switching power, leakage power and total power can be given by the following command -> `report_power`
 
+ ![image](https://github.com/Jyothi181/Logical-Synthesis/blob/main/pictures/Picture8.png)
 
 
 
