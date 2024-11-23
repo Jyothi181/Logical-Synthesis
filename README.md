@@ -44,36 +44,36 @@ Load the input files into tool
    
      `set link_library ./inputs/saed32hvt_ss0p95v125c.db`
 
-    ![image](https://github.com/Jyothi181/Logical-Synthesis/blob/main/pictures/Picture1.png)
+     ![image](https://github.com/Jyothi181/Logical-Synthesis/blob/main/pictures/Picture1.png)
 
-3. Loading RTL file includes two steps - analyze and elaborate
+2. Loading RTL file includes two steps - analyze and elaborate
    
    - Analyze RTL file by using analyze command and automatically read the RTL to tool by using autoread.
 
-    `analyze -format verilog ./inputs/alu.v -autoread -top ALU`
+      `analyze -format verilog ./inputs/alu.v -autoread -top ALU`
 
    - Then elaborate the design to resolve the hierarchies. `elaborate ALU`
   
  
-5. Read the SDC file by using source command.
+3. Read the SDC file by using source command.
 
-  `source ./inputs/alu.sdc`
+    `source ./inputs/alu.sdc`
 
 5. Perform synthesis to map the cells to the given library by using compile_ultra command
 
-   `compile_ultra -no_autoungroup`
+    `compile_ultra -no_autoungroup`
 
     ![image](https://github.com/Jyothi181/Logical-Synthesis/blob/main/pictures/Picture2.png)
     ![image](https://github.com/Jyothi181/Logical-Synthesis/blob/main/pictures/Picture3.png)
 
    
-7. To check the synthesized netlist for issues - `check_design`
+6. To check the synthesized netlist for issues - `check_design`
 
-8. The synthesized netlist can be written into a text file -> `write_file -format verilog -hierarchy -output ./outputs/alu.vg`
+7. The synthesized netlist can be written into a text file -> `write_file -format verilog -hierarchy -output ./outputs/alu.vg`
 
-  ![image](https://github.com/Jyothi181/Logical-Synthesis/blob/main/pictures/Picture4.png)
+     ![image](https://github.com/Jyothi181/Logical-Synthesis/blob/main/pictures/Picture4.png)
   
-  ![image](https://github.com/Jyothi181/Logical-Synthesis/blob/main/pictures/Picture5.png)
+     ![image](https://github.com/Jyothi181/Logical-Synthesis/blob/main/pictures/Picture5.png)
 
 
 # Reports
