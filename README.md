@@ -5,6 +5,8 @@
 
 Logical synthesis refers to the process of converting a high-level abstract description of a digital circuit, typically written in a hardware description language (HDL) such as verilog or VHDL, into a gate level netlist that represents the circuit as interconnected logic gates (AND, OR, NOT, flipflops) and other digital components. In other words, it is the process of converting RTL netlist to a gate level netlist. Logical synthesis is important as it tanslates the high-abstraction specifications into hardware designs and optimizes the design in terms of area, power and performance. It also provides a systematic approach for designing complex integrated cirucits efficiently. Once the HDL is converted into synthesis netlist, it provides the detailed interconnection of logic gates which needs to be implemtented on the layout of the design.
 
+The ALU typically takes two or more input operands, performs a selected operation based on a control signal, and produces an output result. It may also produce status flags (such as Zero, Carry, Negative, etc.) depending on the operation. ex: Arithemtic, logical, relational operations
+
 # Terminologies
 
 - **Netlist:** It is a textual or graphical representation of the circuit that describes how the components of the circuit are interconnected.
