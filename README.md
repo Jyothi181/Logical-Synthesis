@@ -1,5 +1,4 @@
 # Logical-Synthesis
-Logical Synthesis of Arithmetic Logic Unit
 
 # Introduction
  This repository demonstrates the logical synthesis of Arithmetic Logic Unit by using synopsys tool.
