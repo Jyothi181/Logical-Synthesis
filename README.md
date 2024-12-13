@@ -1,5 +1,12 @@
 # Logical-Synthesis
 
+# Table of Contents
+- [Introduction](#Introduction)
+- [Terminologies](#Terminologies)
+- [Requirements](Requirements)
+- [Steps in Logical Synthesis](#Steps-in-Logical-Synthesis)
+- [Reports](#Reports)
+
 # Introduction
  This repository demonstrates the logical synthesis of Arithmetic Logic Unit by using synopsys tool.
 
