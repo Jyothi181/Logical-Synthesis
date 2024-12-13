@@ -3,7 +3,7 @@
 # Table of Contents
 - [Introduction](#Introduction)
 - [Terminologies](#Terminologies)
-- [Requirements](Requirements)
+- [Requirements](#Requirements)
 - [Steps in Logical Synthesis](#Steps-in-Logical-Synthesis)
 - [Reports](#Reports)
 
